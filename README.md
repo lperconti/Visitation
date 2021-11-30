@@ -7,10 +7,13 @@ By:
 
 ## Overview
 
-Words here for the overview
+In this project we look at three winter resorts and utilize weather and event data to predict visitation for each resort.
 
 ### The Stakeholder / Business Problem
-Words here for stakeholder
+
+Winter Ski and Snowboard resorts are seasonal attractions that provide uphill transporation for recreational skiiers and snowboarders. Predicting how many visitors will arrive on any given day can be challenging for resorts without the resources (staff, talent, financial ability to contract out) to depoly prediction services. Most resort sell "season passes" and multi-day passes which allow the consumer to visit the resort on a day of their choosing, making forcasting for visitation difficult. 
+
+Weather plays a significant role in a resort operations and can serve as an attractant or deterrant for visitation. If customers have the flexibility to only visit the resort on days that the weather is favorable though is another matter. There's a perception that 'powder days' consistantly attract big crowds 
 
 ### Data
 
