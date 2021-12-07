@@ -217,14 +217,14 @@ See the full analysis in the Jupyter notebooks linked below or for a non-technic
 ### Repository Structure
 
 ```
-├── data [this file stores the .csv files of resort and weather data]
-├── images [this file stores images]
-├── .gitignore
-├── README.md [this is the overivew of the project, you are reading it now]
-├── presentation.pdf [this is a PDF copy of the non-technical presentation slides accopmanying this project]
-├── Resort_1_EDA_Modeling_notebook.ipynb [Resort 1 Jupyter Notebook - EDA, Modeling and Results]
-├── Resort_2_EDA_Modeling_notebook.ipynb [Resort 2 Jupyter Notebook - EDA, Modeling and Results]
-├── REsort_3_EDA_Modeling_notebook.ipynb [Resort 3 Jupyter Notebook - EDA, Modeling and Results]
+├── data                                          -> This file stores the .csv files of resort and weather data
+├── images                                        -> This file stores images
+├── .gitignore                                    -> Large and sensitive files to ignore
+├── README.md                                     -> This is the overivew of the project, you are reading it now
+├── presentation.pdf                              -> This is a PDF copy of the non-technical presentation slides accopmanying this project
+├── Resort_1_EDA_Modeling_notebook.ipynb          -> Resort 1 Jupyter Notebook - EDA, Modeling and Results
+├── Resort_2_EDA_Modeling_notebook.ipynb          -> Resort 2 Jupyter Notebook - EDA, Modeling and Results
+├── REsort_3_EDA_Modeling_notebook.ipynb          -> Resort 3 Jupyter Notebook - EDA, Modeling and Results
 ```
 
    [Lenore Perconti]: <https://github.com/lperconti>
