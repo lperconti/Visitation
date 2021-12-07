@@ -4,7 +4,7 @@
 
 By: [Lenore Perconti](https://github.com/lperconti)
 
-![](Visuals/Ski Resort Banner.jpeg)
+![Resort](Visuals/Ski Resort Banner.jpeg)
 
 ## Overview
 
