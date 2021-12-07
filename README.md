@@ -4,9 +4,11 @@
 
 By: [Lenore Perconti](https://github.com/lperconti)
 
+![](Visuals/Ski Resort Banner.jpg)
+
 ## Overview
 
-In this project I look at three winter resorts and utilize weather and event data to predict visitation for each resort. This notebook looks at Resort 1. 
+In this project I look at three winter resorts and utilize weather and event data to predict visitation for each resort. 
 
 ### The Stakeholder / Business Problem
 
@@ -81,7 +83,7 @@ Daily Visitors stats:
 
 This resort is our largest ski resort in both capacity (21,803 passenger/hr) and the population area (about 2 million) center close to the resort. 
 
-###### A couple notes on getting the data for this particular ski area: 
+A couple notes on getting the data for this particular ski area: 
 
 * `SCHOOL_OUT` is if the public school district did not have class on a day that normally would have school (weekday). Examples include winter break, MLK Day, and teacher prep days. Weekends surrounding school closures such as Thanksgiving, Presidents Day, were not counted as a school out day. I was able to source this from the school district website. 
 * Mountain Weather Data was gathered from a NOAA weather station on the mountain the resort is located, however this weather station is on a different face of the mountain and sometimes different aspects of this mountain can experience differences in weather, especially in snow and wind. 
@@ -141,28 +143,33 @@ Each resort was run through iterative models, starting with Linear Regression wi
 #### Resort 2
 
 * Baseline Model: Linear Regression
-   * Mean CV Score: 
+   * Mean CV Score: 0.368
 
-* Best Model: 
-   * Mean CV Score: 
-   * Test Score: 
-   * Mean Difference abs(predicted - actual): 
+* Best Model: Random Forest Regression
+   * Mean CV Score: 0.367
+   * Test Score: 0.301
+   * Mean Difference abs(predicted - actual): 311
 
 #### Resort 3
 
 * Baseline Model: Linear Regression
-   * Mean CV Score: 
+   * Mean CV Score: 0.645
 
-* Best Model: 
-   * Mean CV Score: 
-   * Test Score: 
-   * Mean Difference abs(predicted - actual): 
+* Best Model: Gradient Boosting Regressor
+   * Mean CV Score: 0.726
+   * Test Score: 0.748
+   * Mean Difference abs(predicted - actual): 786.74
 
 
 ## Conclusions
 
 Overall Comments: 
 
+It was interesting to run regression models on three ski resorts and get three different models back. The resorts with larger datasets and more weather data to work with had better results (Resort 1 and 3). Results from Resort 2 suggest that for smaller resorts with shorter seasons, more data may be needed, or further research is needed to account for the particular capacity limits of their parking lot. 
+
+Overall, while weather and calendar events may have strong overall predictive power for ski resort visitation with Resort 1 showing 78% and resort 3 showing 75% in the model score. 
+
+Specific resort conclusions are below: 
 
 ### Resort 1 Conclusions: 
 
@@ -174,11 +181,29 @@ Out of weather related features, Temperature in town and mountain snowdepth are 
 
 ### Resort 2 Conclusions: 
 
+For Resort 2, we found that a Random Forest Regressor Model with hyperparamters of `criterion` = 'mse', `max_depth` = None, `max_features` = 'sqrt', `n_estimators` = 14, explained 30% of the variance in our data. 
+
+In general this dataset does not have as much of predictive power as our larger resort datasets. 
+
+The Feature Importance report shows that in general, weather for this resort has stronger feature importance than date. This may be due to the fact that this resort maxes out around 3,000 visitors due to parking, and doesn't have the flexibility to take more visitors on. 
+
 ### Resort 3 Conclusions: 
 
-### Would this be useful to ski resorts?   
+For Resort 3, we found that Gradient Boosting Regressor with hyperparamters of `criterion`='friedman_mse', `n_estimators`=300, and `min_samples_split`= 2, explained 75% of the variance in our data. 
 
-The Mean difference between predictions and actual is 687.81 for Resort 1. That means that on any given day the predictor could be +/- 688 visitors off, or more Considering that the standard deviation of the target is 1709.93, our predictor is well within 1 standard deviation and successful. In reality when the ski resort goes to predict visitors, it may not make busienss sense to completely rely upon this model for staffing and resources. Parking 600 more cars than expected could strain personnel in the parking department, or preparing food for 600 more visitors than what actually came may result in loss of food product. 
+The Feature Importance report shows that in general, a mix of Calendar and weather features are important for predicting visitation.
+
+Top predictors include: Saturday, Sunday, Average Temperature in town and on the mountain and Mountain Snow depth. 
+
+Using the model to predict visitors: 
+
+The Mean difference between predictions and actual is 787. That means that on any given day the predictor could be +/- 786 visitors off, or more Considering that the standard deviation of the target is 2,014, our predictor is well within 1 standard deviation and successful. 
+
+### Would these Models be useful to ski resorts?   
+
+For Resort 1, the mean difference between predictions and actual is 687.81. That means that on any given day the model could be +/- 688 visitors off, or more considering that the standard deviation of the target for Resort 1 is 1709.93, our predictor is well within 1 standard deviation and successful.
+
+In reality when the ski resort goes to predict visitors, it may not make busienss sense to completely rely upon this model for staffing and resources. Parking 600 more cars than expected could strain personnel in the parking department, or preparing food for 600 more visitors than what actually came may result in loss of food product. 
 
 These models by no means are intended to be the sole tool off which to predict visitors. It is intended to investigate the predictive power of calendar and weather factors, as well as help resorts with forecasting a ballpark visitation and then using information that a human element can apply such as: special events occuring, marketing, and long term weather trends. For example, a powder day after a dry spel may draw more visitors than a powder day after two weeks of consistant quality snowfall.
 
@@ -194,23 +219,21 @@ There's a lot that can be done with this model to improve it. Let's explore a fe
 
 ## For More Information
 
-See the full analysis in the [Jupyter notebooks] or for a non-technical audience, our [Presentation Slides]. 
+See the full analysis in the Jupyter notebooks linked below or for a non-technical audience, the Presentation Slides. 
 
 ### Repository Structure
 
 ```
-├── code
-│   ├── ...
-│   ├──  ...
-├── data
-├── images
-├── __init__.py
-├── README.md
-├── .pdf
-└── a
+├── data [this file stores the .csv files of resort and weather data]
+├── images [this file stores images]
+├── .gitignore
+├── README.md [this is the overivew of the project, you are reading it now]
+├── presentation.pdf [this is a PDF copy of the non-technical presentation slides accopmanying this project]
+├── Resort_1_EDA_Modeling_notebook.ipynb [Resort 1 Jupyter Notebook - EDA, Modeling and Results]
+├── Resort_2_EDA_Modeling_notebook.ipynb [Resort 2 Jupyter Notebook - EDA, Modeling and Results]
+├── REsort_3_EDA_Modeling_notebook.ipynb [Resort 3 Jupyter Notebook - EDA, Modeling and Results]
 ```
 
-
    [Lenore Perconti]: <https://github.com/lperconti>
-   [Jupyter notebook]: <https://github.com/ewjohn127/dsc_project4/blob/main/final_notebook.ipynb>
    [Presentation Slides]: <linkhere.com>
+   [Resort_1_EDA_MODELING_notebook.ipynb]: <https://github.com/lperconti/Visitation/blob/main/Resort_1_EDA_Modeling_notebook.ipynb>
