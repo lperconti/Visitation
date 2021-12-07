@@ -46,15 +46,11 @@ The resort Visitation, Weather, Holidays
 
 **Daily Visits:**
 
-count     484.000000
-
-mean     2421.783058
-
-std      1709.932584
-
-min        48.00000
-
-max      7144.000000
+- count    484
+- mean     2422
+- std      1710
+- min      48
+- max      7144
 
 #### Resort 2
 
@@ -74,10 +70,10 @@ After cleaning:
 - Dataset count  468.000000
 
 Daily Visitors stats:
-- mean      992.083333
-- std       586.503671
-- min        88.000000
-- max      2944.000000
+- mean     992
+- std      587
+- min      88
+- max      2944
 
 #### Resort 3
 
@@ -95,13 +91,10 @@ After cleaning stats:
 
 Daily Visitors stats:
 
-- mean     2869.439483
-
-- std      2013.683973
-
-- min       118.000000
-
-- max      8719.000000
+- mean     2869
+- std      2014
+- min      118
+- max      8719
 
 ### Methods
 
