@@ -20,7 +20,15 @@ Determining how many people on a given day will show up and ski or snowboard at 
 
 Larger winter resort entities such as VAIL have teams of business analysts and data scientists to help business anticipation and forcasting. Smaller resorts on the other hand, do not have these resources. In my informal interviewing I found resorts deploying visitation predictions based on historical visitation data, weather, local events and key individuals' years of experience and insight. One of the resorts I interviewed had an excel spreadsheet that would weigh different factors such as weather and date to generate a prediction that helped the resort budget for visitation and the actual visitatoin is "typically within 10 - 15 % variance" of the budgeted visits. 
 
-### Data
+## Project Goals
+There are two main goals for this project:
+
+- Produce daily visitation prediction models based on weather and calendar events for three different day-use resorts.
+- Analyze the predictive power and therefore feesability using of weather and calendar events for ski resort daily visitation prediction.
+
+The results of these models can be used to help business anticipation for day-use ski resorts and lay a foundatoin for future modeling and improvements.
+
+## Data
 
 To simplify my quest to prediciting visitation, I solicited visitation data from only day-visit resorts in the Pacific Northwest Region. This means these resorts do not have overnight accomodations at the resort. Three resorts volunteered daily visitation data for this project. Data was given on the condition that the specific resort not be identified publically. Therefore the resort name and any location-based information or potential identifying information associated with this dataset are withheld from this repository.
 
@@ -30,7 +38,7 @@ To simplify my quest to prediciting visitation, I solicited visitation data from
 
 Resort 1 generously gave four seasons' worth of daily visit totals in an excel document for use in this project. The daily visits in the given data were further broken down into daily season pass holder visits, day ticket visits, day visits, and night vists. 
 
-###### A couple notes on sourcing the data for this particular ski area: 
+A couple notes on sourcing the data for this particular ski area: 
 
 * `is_school_out` indicates if the public school district did not have class on a day that normally would have school (weekday). These included Winter Break, MLK Day, Presidents' Day, and Spring Break. Weekends (Sundays and Mondays) surrounding school closures such as Thanksgiving, Presidents Day, were not counted as a `SCHOOL_OUT` day. I was able to source these dates from the local school district's website. There could be other schools in the surrounding area such as colleges, private schools with school out days that this data does not capture. 
 
@@ -42,7 +50,7 @@ Resort 1 generously gave four seasons' worth of daily visit totals in an excel d
 
 The resort Visitation, Weather, Holidays
 
-#### After cleaning Visitation stats: 
+After cleaning Visitation stats: 
 
 **Daily Visits:**
 
@@ -58,7 +66,7 @@ The resort Visitation, Weather, Holidays
 
 It's also worth noting that this moutain is closed on Tuesdays and Wednesdays unless those days fall during the holidays. 
 
-###### A couple notes on getting the data for this particular ski area: 
+A couple notes on getting the data for this particular ski area: 
 
 * Resort 2 Mountain Weather Data was gathered from a nearby SNOTEL station that was not at the ski area (6.9 miles away). This ski area has a private weather station that has only started gathering weather data and displaying it online in the last year. 
 * Wind data was not availible for the nearest town
@@ -152,7 +160,6 @@ Each resort was run through iterative models, starting with Linear Regression wi
    * Mean CV Score: 0.726
    * Test Score: 0.748
    * Mean Difference abs(predicted - actual): 786.74
-
 
 ## Conclusions
 
