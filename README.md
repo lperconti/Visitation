@@ -219,7 +219,7 @@ There's a lot that can be done with this model to improve it. Let's explore a fe
 
 ## For More Information
 
-See the full analysis in the Jupyter notebooks linked below or for a non-technical audience, the Presentation Slides. 
+See the full analysis in the Jupyter notebooks linked below or for a non-technical audience, the [Presentation Slides]. 
 
 ### Repository Structure
 
@@ -232,8 +232,9 @@ See the full analysis in the Jupyter notebooks linked below or for a non-technic
 ├── Resort_1_EDA_Modeling_notebook.ipynb          -> Resort 1 Jupyter Notebook - EDA, Modeling and Results
 ├── Resort_2_EDA_Modeling_notebook.ipynb          -> Resort 2 Jupyter Notebook - EDA, Modeling and Results
 ├── REsort_3_EDA_Modeling_notebook.ipynb          -> Resort 3 Jupyter Notebook - EDA, Modeling and Results
+├── Winter Resort Presentation.pdf                -> PDF Version of presentation slides
 ```
 
    [Lenore Perconti]: <https://github.com/lperconti>
-   [Presentation Slides]: <linkhere.com>
+   [Presentation Slides]: <https://docs.google.com/presentation/d/1njUu7dxNmD7zyrAf2w2S1ZsSsA5Z7SHtOiTVbAewyrQ/edit?usp=sharing>
    [Resort_1_EDA_MODELING_notebook.ipynb]: <https://github.com/lperconti/Visitation/blob/main/Resort_1_EDA_Modeling_notebook.ipynb>
