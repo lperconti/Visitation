@@ -76,7 +76,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-.Data_Organize
+Data_Organize.ipynb
 #Data_Organize has the identifying characteristics of each resort 
 #and notes on the source of for all the data gathered
 
