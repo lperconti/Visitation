@@ -48,7 +48,7 @@ A couple notes on sourcing the data for this particular ski area:
 
 * Town weather Data was gathered from the metropolitan area's airport. 
 
-The resort Visitation, Weather, Holidays
+* All weather measurements are in Standard (degrees fahrenheit, inches)
 
 After cleaning Visitation stats: 
 
